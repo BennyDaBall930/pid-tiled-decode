@@ -32,14 +32,14 @@ clean **7680x4352 (33 MP) master in ~60 seconds** end-to-end on a single RTX 509
 ## The problem, in one image
 
 Same latent, same seed, decoded to 7680x4352 both ways. Left: the stage-1 VAE decode (lanczos-upscaled
-for reference). Middle: single-shot PiD at 33 MP — magenta wash, pink whites, chroma noise. Right:
-this tool.
+for reference). Middle: single-shot PiD at 33 MP — magenta wash, chroma noise. Right: this tool.
 
-![single-shot collapse vs tiled](images/ab_junction_512crop.jpg)
-![second crop, horizontal seam location](images/ab_hseam_512crop.jpg)
+![single-shot collapse vs tiled — crop sits directly on a tile seam](images/ab_collapse_roses.jpg)
 
-The right panel is a 100% crop centered **exactly on the 4-tile junction** — the worst-case location
-for any tiling scheme.
+That 100% crop sits **directly on the vertical tile seam** — find it. The second crop shows what the
+decode adds over the plain VAE even before you care about size:
+
+![real synthesized detail vs the VAE decode](images/ab_detail_dahlia.jpg)
 
 ## Measured (reproducible demo, prompt + seed below)
 
@@ -102,8 +102,9 @@ python pid_tiled_decode.py \
     --width 1920 --height 1088 --seed 508040200 --full-frame
 ```
 
-That exact command (with `--full-frame` for the single-shot A/B) produced every image and number in
-this README.
+That exact command (with `--full-frame` for the single-shot A/B) produced the measured numbers in
+this README. The photos come from an identical run with a different prompt ("beautiful flower garden
+in full summer bloom, ...", seed `508040300`) — same pipeline, same settings, same everything else.
 
 Point the tool at your install with `--comfy-url` / `--comfy-root` or the `COMFYUI_URL` /
 `COMFYUI_ROOT` env vars. Offline sanity check: `python pid_tiled_decode.py --self-test`.
