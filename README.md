@@ -78,7 +78,8 @@ PiD was designed to condition on:
 
 Requirements: a running ComfyUI server (≥ 0.28, PiD support is in core) with the PiD checkpoints
 (`pid_qwenimage_1024_to_4096_4step_bf16.safetensors` + `gemma_2_2b_it_elm_bf16.safetensors` — NVIDIA
-weights, NSCLv1 non-commercial license), and any python with `numpy` + `pillow` (the ComfyUI venv
+weights under the [NVIDIA License](https://huggingface.co/nvidia/PixelDiT-1300M-1024px/blob/main/LICENSE),
+non-commercial research/evaluation use), and any python with `numpy` + `pillow` (the ComfyUI venv
 works). No custom nodes.
 
 **Universal flow — decode a latent from *your own* workflow:** add a `SaveLatent` node after your
@@ -159,7 +160,13 @@ one-line core fix: [docs/comfyui-latentcrop-5dim-bug.md](docs/comfyui-latentcrop
 }
 ```
 
-## License
+## License & compliance
 
-MIT for everything in this repo. The PiD model weights are NVIDIA's, under their NSCLv1
-(non-commercial) license — get them from the official release channels.
+- Everything **in this repo** — code, docs, demo images (our own generations) — is MIT.
+- This repo contains **no NVIDIA model weights and no NVIDIA code**. The PiD checkpoints are
+  NVIDIA's, distributed by NVIDIA under the
+  [NVIDIA License](https://huggingface.co/nvidia/PixelDiT-1300M-1024px/blob/main/LICENSE)
+  (non-commercial: research and evaluation use) — get them from the official release channels and
+  read that license before using the model in anything commercial.
+- This is an independent project: not affiliated with, sponsored by, or endorsed by NVIDIA or
+  Comfy Org. "PiD" and "PixelDiT" are used to describe compatibility, nothing more.
