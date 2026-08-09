@@ -77,7 +77,8 @@ PiD was designed to condition on:
 ## Quickstart
 
 Requirements: a running ComfyUI server (≥ 0.28, PiD support is in core) with the PiD checkpoints
-(`pid_qwenimage_1024_to_4096_4step_bf16.safetensors` + `gemma_2_2b_it_elm_bf16.safetensors` — NVIDIA
+(`pid_1.5_qwenimage_1024_to_4096_4step_bf16.safetensors` + `gemma_2_2b_it_elm_bf16.safetensors` —
+use v1.5, v1 is deprecated upstream and measurably worse on color — NVIDIA
 weights under the [NVIDIA License](https://huggingface.co/nvidia/PixelDiT-1300M-1024px/blob/main/LICENSE),
 non-commercial research/evaluation use), and any python with `numpy` + `pillow` (the ComfyUI venv
 works). No custom nodes.

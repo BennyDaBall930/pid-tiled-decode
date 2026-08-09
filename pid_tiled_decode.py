@@ -58,7 +58,7 @@ DEFAULT_COMFY_ROOT = Path(os.environ.get("COMFYUI_ROOT", str(Path.home() / "Comf
 STAGE1_VAE = "qwen_image_vae.safetensors"
 
 # PiD decode constants (the standard ComfyUI PiD release checkpoints).
-PID_UNET = "pid_qwenimage_1024_to_4096_4step_bf16.safetensors"
+PID_UNET = "pid_1.5_qwenimage_1024_to_4096_4step_bf16.safetensors"
 PID_CLIP = "gemma_2_2b_it_elm_bf16.safetensors"
 PID_SIGMAS = "0.999,0.866,0.634,0.342,0"
 PID_SCALE = 4  # stage-1 px -> output px
