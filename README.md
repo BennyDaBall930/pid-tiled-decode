@@ -20,7 +20,7 @@ everywhere.
 This tool decodes the **same latent as overlapping tiles instead**. Every tile is a normal-sized PiD
 job that stays inside the trained envelope, and the blend is seam-free. A 1920x1088 latent becomes a
 clean **7680x4352 (33 MP) master in ~60 seconds** end-to-end on a single RTX 5090 — verified up to
-**107MP** (13824x7776), scaling ~linearly at roughly 1MP of finished output per second.
+**244MP** (15616x15616), scaling ~linearly at roughly 1MP of finished output per second.
 
 > **Prefer nodes over scripts?** The same engine ships as native ComfyUI nodes (validated against
 > this driver at 66 dB PSNR):
