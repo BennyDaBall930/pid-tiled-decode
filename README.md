@@ -172,3 +172,7 @@ one-line core fix: [docs/comfyui-latentcrop-5dim-bug.md](docs/comfyui-latentcrop
   read that license before using the model in anything commercial.
 - This is an independent project: not affiliated with, sponsored by, or endorsed by NVIDIA or
   Comfy Org. "PiD" and "PixelDiT" are used to describe compatibility, nothing more.
+
+**Follow me on X [@BennyDaBall_OG](https://x.com/BennyDaBall_OG) !**
+
+**Want to support my work? Buy me a coffee on [Ko-fi](https://ko-fi.com/bennydaball) !**
